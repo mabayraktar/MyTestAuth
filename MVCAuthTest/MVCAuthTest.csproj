@@ -115,6 +115,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\DeptController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -123,7 +124,8 @@
     <Compile Include="Models\DeptModel.cs" />
     <Compile Include="Models\EmpModel.cs" />
     <Compile Include="Models\MyOrganizationModel.cs" />
-    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserModel.cs" />
+    <Compile Include="MyRoleProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -151,6 +153,9 @@
     <Content Include="Views\Shared\_LayoutPage.cshtml" />
     <Content Include="Views\Dept\Create.cshtml" />
     <Content Include="Views\Dept\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Account\Login.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

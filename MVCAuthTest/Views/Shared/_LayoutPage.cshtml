@@ -11,8 +11,16 @@
     <div>
      <ul>
         <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        @if (User.Identity.IsAuthenticated)
+        {
         <li>@Html.ActionLink("List Dept", "Index", "Dept")</li>
         <li>@Html.ActionLink("Create Dept", "Create", "Dept")</li>
+        <li>@Html.ActionLink("Logout", "Logout", "Account")</li>
+        }
+        else
+        {
+        <li>@Html.ActionLink("Login", "Login", "Account")</li>
+        }
     </ul>
     </div>
     </div>

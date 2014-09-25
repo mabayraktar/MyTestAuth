@@ -19,6 +19,7 @@ namespace MVCAuthTest.Controllers
             Depts.Add(new DeptModel("Support", 4));
             Depts.Add(new DeptModel("Sales", 5));
         }
+        [Authorize(Roles = "V,A")]
         public ActionResult Index()
         {
             return View(Depts);
@@ -26,7 +27,7 @@ namespace MVCAuthTest.Controllers
 
         //
         // GET: /Dept/Details/5
-
+        [Authorize(Roles = "A,V")]
         public ActionResult Details(int id)
         {
             return View();
@@ -34,7 +35,7 @@ namespace MVCAuthTest.Controllers
 
         //
         // GET: /Dept/Create
-
+        [Authorize(Roles="A")]
         public ActionResult Create()
         {
             return View();
