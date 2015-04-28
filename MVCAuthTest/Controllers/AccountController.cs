@@ -21,6 +21,7 @@ namespace MVCAuthTest.Controllers
         lUser.Add(new UserModel(2,"Ali","123456","V"));
         lUser.Add(new UserModel(3,"Derya","123456","V"));
         lUser.Add(new UserModel(4,"Hilal","123456","V"));
+        lUser.Add(new UserModel(4, "Alkim", "123456", "V"));
         }
         
         public ActionResult Login()
